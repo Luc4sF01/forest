@@ -594,6 +594,30 @@ video {
   }
 }
 
+.neon {
+  border-radius: 9999px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(172 239 117 / var(--tw-border-opacity, 1));
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #ACEF75 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(172 239 117 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #17E880 var(--tw-gradient-to-position);
+  --tw-text-opacity: 1;
+  color: rgb(15 28 21 / var(--tw-text-opacity, 1));
+  box-shadow: 0 1px 4px 1px rgb(172 239 117 / 25%),
+      inset 0px -1px 2px #ACEF75;
+}
+
+.radial-gradient {
+  background-image: radial-gradient(
+      50% 100% at 50% 0%,
+      #2E482C 0%,
+      #16281F 100%
+    );
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1004,6 +1028,20 @@ video {
   transform: none;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn .4s ease-in-out forwards;
+}
+
 @keyframes slideIn {
   0% {
     opacity: 0;
@@ -1018,20 +1056,6 @@ video {
 
 .animate-slide-in {
   animation: slideIn .4s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-fade-in {
-  animation: fadeIn .4s ease-in-out forwards;
 }
 
 .cursor-pointer {
@@ -2013,11 +2037,6 @@ video {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity, 1));
 }
 
-.bg-verde-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(145 238 119 / var(--tw-bg-opacity, 1));
-}
-
 .bg-verde-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(23 232 128 / var(--tw-bg-opacity, 1));
@@ -2875,14 +2894,6 @@ video {
   forced-color-adjust: none;
 }
 
-.animate-1 {
-  animation-delay: 100ms;
-}
-
-.animate-2 {
-  animation-delay: 200ms;
-}
-
 .animate-3 {
   animation-delay: 300ms;
 }
@@ -2897,6 +2908,23 @@ video {
 
 .animate-6 {
   animation-delay: 600ms;
+}
+
+.before\:neon::before {
+  border-radius: 9999px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(172 239 117 / var(--tw-border-opacity, 1));
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #ACEF75 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(172 239 117 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #17E880 var(--tw-gradient-to-position);
+  --tw-text-opacity: 1;
+  color: rgb(15 28 21 / var(--tw-text-opacity, 1));
+  content: var(--tw-content);
+  box-shadow: 0 1px 4px 1px rgb(172 239 117 / 25%),
+      inset 0px -1px 2px #ACEF75;
 }
 
 @media (min-width: 640px) {
@@ -3000,12 +3028,6 @@ video {
 .before\:w-6::before {
   content: var(--tw-content);
   width: 1.5rem;
-}
-
-.before\:bg-verde-400::before {
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(23 232 128 / var(--tw-bg-opacity, 1));
 }
 
 .before\:transition-\[width\]::before {
